@@ -1,0 +1,20 @@
+from aiogram import Dispatcher
+import asyncio
+
+from core.bot import bot
+from components.handlers import router
+from database.init_db import init_database
+
+async def main():
+    await init_database()
+    
+    dp = Dispatcher()
+    dp.include_router(router)
+    await dp.start_polling(bot)
+    await bot.delete_webhook(drop_pending_updates=True)
+
+if __name__ == '__main__':
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        pass
