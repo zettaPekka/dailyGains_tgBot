@@ -35,6 +35,6 @@ DB_PATH = 'sqlite+aiosqlite:///database/users.db' # путь до базы да�
 
 BOT_TOKEN = 'API_TOKEN' # АПИ токен с @botfather
 
-### 4. Запуск 
+### 4. Запуск в корне проекта
 
 python main.py
