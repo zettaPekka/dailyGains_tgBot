@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 
 router = Router()
 
-test_achiv = {}
+
 
 @router.message(CommandStart())
 async def start(message: Message):
