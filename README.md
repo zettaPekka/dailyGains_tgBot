@@ -31,9 +31,9 @@ pip install -r requirements.txt
 
 ### 3. Создайте файл .env в корне проекта с 2 константами
 
-DB_PATH = 'sqlite+aiosqlite:///database/users.db' # путь до базы данных
+DB_PATH=sqlite+aiosqlite:///database/users.db # путь до базы данных
 
-BOT_TOKEN = 'API_TOKEN' # АПИ токен с @botfather
+BOT_TOKEN=API_TOKEN # АПИ токен с @botfather
 
 ### 4. Запуск в корне проекта
 
