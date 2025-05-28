@@ -1,9 +1,14 @@
 from aiogram import Dispatcher
 import asyncio
 
+import logging
+
 from core.bot import bot
 from components.handlers import router
 from database.init_db import init_database
+
+
+logging.basicConfig(level=logging.INFO)
 
 async def main():
     await init_database()

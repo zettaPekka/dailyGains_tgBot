@@ -107,10 +107,12 @@ async def statistics(callback: CallbackQuery):
         page = 0
         for date, achievement in data.items():
             page_i = page // 15
-            if len(answer_text) < (page_i + 1): answer_text.append('')
+            if len(answer_text) < (page_i + 1):
+                answer_text.append('')
             achievement_parse = achievement.replace('<', '&lt;').replace('>', '&gt;')
             answer_text[page_i] += f'<b>• {date}</b>\n<i>{achievement_parse}</i>\n\n'
             page += 1
+        
         if len(answer_text[0]) < 15:
             await callback.message.answer(f'Страница №1\n\n{answer_text[0]}\n\n<b>Если вам нужна полная статистика в 1 файле то обращайтесь к @zettapekka</b>')    
         else:
@@ -170,7 +172,8 @@ async def after_page_index(callback: CallbackQuery):
         page = 0
         for date, achievement in data.items():
             page_i = page // 15
-            if len(answer_text) < (page_i + 1): answer_text.append('')
+            if len(answer_text) < (page_i + 1): 
+                answer_text.append('')
             achievement_parse = achievement.replace('<', '&lt;').replace('>', '&gt;')
             answer_text[page_i] += f'<b>• {date}</b>\n<i>{achievement_parse}</i>\n\n'
             page += 1
