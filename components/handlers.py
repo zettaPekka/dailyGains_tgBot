@@ -3,14 +3,10 @@ from aiogram.filters import Command, CommandStart
 from aiogram import Router, F
 from aiogram.fsm.context import FSMContext
 
-import logging
-
 from database.crud import chek_user, chek_today_achievement, add_achievement_to_db, get_today_achievement, get_statistics
 import components.keyboards as kb
 from components.states import Achievement
 
-
-logging.basicConfig(level=logging.INFO)
 
 router = Router()
 
